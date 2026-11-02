@@ -1,0 +1,10 @@
+# Private source material: keep on this computer only
+*.pdf
+/*.jpg
+/*.jpeg
+/*.png
+
+# System files
+Thumbs.db
+desktop.ini
+.DS_Store
