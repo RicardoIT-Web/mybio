@@ -11,6 +11,7 @@
   --bar-soft: #18304f;
   --accent: #f07a35;
   --accent-ink: #15110d;
+  --ok: #3ccf7a; /* "available" status */
   color-scheme: dark;
   --display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
   --body: "IBM Plex Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -111,11 +112,11 @@ section { scroll-margin-top: calc(var(--nav-h) + 1rem); }
 .tb-row dt { border-right: 1px solid var(--line); }
 .status { display: flex; align-items: center; gap: 0.5rem; }
 .status::before {
-  content: ""; flex: none; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--accent);
+  content: ""; flex: none; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--ok);
   animation: pulse 2.2s ease-out infinite;
 }
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); }
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--ok) 55%, transparent); }
   80%, 100% { box-shadow: 0 0 0 0.5rem transparent; }
 }
 @media (prefers-reduced-motion: reduce) { .status::before { animation: none; } }
