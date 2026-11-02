@@ -232,7 +232,7 @@ export const qualifications = {
 export const contact = {
   label: 'Contact',
   title: "Planning a project? Let's talk.",
-  text: "I'm available for project management contracts and consultancy in Portugal, the UK and remotely.",
+  text: "I'm available for project management contracts and consultancy in Portugal and remotely.",
   email: 'rick_piedade@hotmail.com',
   linkedin: 'https://www.linkedin.com/in/rpiedade',
   copy: 'Copy',
