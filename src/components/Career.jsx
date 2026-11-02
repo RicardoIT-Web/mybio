@@ -7,6 +7,15 @@ const pct = (months) => `${(months / SCHEDULE_MONTHS) * 100}%`;
 const axisYears = [2014, 2016, 2018, 2020, 2022, 2024, 2026];
 const latest = career.roles[career.roles.length - 1].id;
 
+// Company icon on a small white tile, so logos with and without backgrounds match
+function Logo({ role }) {
+  return (
+    <span className="logo" aria-hidden="true">
+      <img src={role.logo} alt="" width="96" height="96" loading="lazy" />
+    </span>
+  );
+}
+
 function RoleDetail({ role }) {
   return (
     <div className="role">
@@ -16,9 +25,12 @@ function RoleDetail({ role }) {
         {role.place}
       </div>
       <div>
-        <h3>
-          {role.org}
-          {role.orgNote && <small className="label"> ({role.orgNote})</small>}
+        <h3 className="role-org">
+          <Logo role={role} />
+          <span>
+            {role.org}
+            {role.orgNote && <small className="label"> ({role.orgNote})</small>}
+          </span>
         </h3>
         <p className="title">{role.title}</p>
         <ul>
@@ -67,8 +79,11 @@ export default function Career() {
                   }}
                 >
                   <span className="g-name">
-                    <b>{role.org}</b> · {role.short}
-                    <small>{role.dates}</small>
+                    <Logo role={role} />
+                    <span className="g-text">
+                      <b>{role.org}</b> · {role.short}
+                      <small>{role.dates}</small>
+                    </span>
                   </span>
                   <span className="track">
                     <motion.i

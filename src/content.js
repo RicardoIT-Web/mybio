@@ -85,6 +85,7 @@ export const career = {
   roles: [
     {
       id: 'ge',
+      logo: 'assets/logos/ge.png',
       org: 'GE Oil & Gas',
       orgNote: 'now Baker Hughes',
       short: 'Engineering & supply chain',
@@ -101,6 +102,7 @@ export const career = {
     },
     {
       id: 'he',
+      logo: 'assets/logos/highways.png',
       org: 'Highways England',
       short: 'Assistant PM',
       title: 'Assistant Project Manager',
@@ -115,6 +117,7 @@ export const career = {
     },
     {
       id: 'mace',
+      logo: 'assets/logos/mace.png',
       org: 'Mace Group',
       orgNote: 'PM consultancy',
       short: 'Assistant PM',
@@ -130,6 +133,7 @@ export const career = {
     },
     {
       id: 'bh1',
+      logo: 'assets/logos/baker-hughes.png',
       org: 'Baker Hughes',
       short: 'Planner → Project Manager',
       title: 'Global Testing Equipment & Tooling Planner · Project Manager · Assistant Project Manager',
@@ -145,6 +149,7 @@ export const career = {
     },
     {
       id: 'ci',
+      logo: 'assets/logos/code-institute.png',
       org: 'Code Institute',
       training: true,
       short: 'Full-stack development',
@@ -157,6 +162,7 @@ export const career = {
     },
     {
       id: 'bh2',
+      logo: 'assets/logos/baker-hughes.png',
       org: 'Baker Hughes',
       short: 'Project Manager',
       title: 'Project Manager',
