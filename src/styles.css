@@ -1,13 +1,13 @@
 /* Layout: sticky bar, single-column CV, hero with an engineering "title block", career drawn as a Gantt schedule */
 :root {
-  --bg: #f4f6f5;
-  --bg-glass: rgba(244, 246, 245, 0.82);
+  --bg: #e8f1fa;
+  --bg-glass: rgba(232, 241, 250, 0.82);
   --surface: #ffffff;
-  --fg: #15212b;
-  --muted: #5a6872;
-  --line: #d6dddb;
-  --bar: #2c6b6f;
-  --bar-soft: #dde9e8;
+  --fg: #12233a;
+  --muted: #536479;
+  --line: #ccd9e7;
+  --bar: #1f5f8b;
+  --bar-soft: #d9e7f4;
   --accent: #d4581a;
   --accent-ink: #ffffff;
   --display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
@@ -17,13 +17,13 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0f161b; --bg-glass: rgba(15, 22, 27, 0.82); --surface: #162028; --fg: #e4eaec; --muted: #93a3ab; --line: #2a3740;
-    --bar: #5aa8aa; --bar-soft: #1d3135; --accent: #f07a35; --accent-ink: #15110d; color-scheme: dark;
+    --bg: #0c1624; --bg-glass: rgba(12, 22, 36, 0.82); --surface: #13223a; --fg: #e3ebf5; --muted: #93a5bb; --line: #263851;
+    --bar: #5ea2d6; --bar-soft: #1a2d47; --accent: #f07a35; --accent-ink: #15110d; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0f161b; --bg-glass: rgba(15, 22, 27, 0.82); --surface: #162028; --fg: #e4eaec; --muted: #93a3ab; --line: #2a3740;
-  --bar: #5aa8aa; --bar-soft: #1d3135; --accent: #f07a35; --accent-ink: #15110d; color-scheme: dark;
+  --bg: #0c1624; --bg-glass: rgba(12, 22, 36, 0.82); --surface: #13223a; --fg: #e3ebf5; --muted: #93a5bb; --line: #263851;
+  --bar: #5ea2d6; --bar-soft: #1a2d47; --accent: #f07a35; --accent-ink: #15110d; color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -34,6 +34,7 @@ body {
   background: var(--bg);
   color: var(--fg);
   font: 400 1rem/1.6 var(--body);
+  transition: background-color 0.35s, color 0.35s;
 }
 body::before {
   content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg);
@@ -86,6 +87,13 @@ h1, h2, h3 { font-family: var(--display); font-stretch: 75%; line-height: 1.05; 
 .lang button[aria-pressed="true"] { color: var(--bg); }
 .lang-pill { position: absolute; inset: 0; background: var(--fg); border-radius: 999px; }
 .lang-code { position: relative; }
+.theme-btn {
+  display: grid; place-items: center; overflow: hidden;
+  border: 1px solid var(--line); background: var(--surface); border-radius: 999px;
+  width: 2.4rem; height: 2.4rem; cursor: pointer; color: var(--fg);
+}
+.theme-btn svg { display: block; width: 1.1rem; height: 1.1rem; }
+.theme-btn:hover { border-color: var(--bar); }
 .menu-btn { display: none; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; width: 2.4rem; height: 2.4rem; cursor: pointer; }
 .burger { display: grid; gap: 5px; justify-items: center; }
 .burger i { display: block; width: 16px; height: 1.5px; background: var(--fg); transition: transform 0.25s; }
