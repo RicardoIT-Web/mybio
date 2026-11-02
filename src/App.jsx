@@ -1,5 +1,4 @@
 import { MotionConfig } from 'framer-motion';
-import { LangProvider } from './lang.jsx';
 import Nav from './components/Nav.jsx';
 import { Figures, Hero } from './components/Hero.jsx';
 import Career from './components/Career.jsx';
@@ -7,7 +6,7 @@ import { About, Contact, Footer, Qualifications, Services, Skills } from './comp
 
 export default function App() {
   return (
-    <LangProvider>
+    <>
       {/* "user" turns animations off for people who ask their device for reduced motion */}
       <MotionConfig reducedMotion="user">
         <Nav />
@@ -23,6 +22,6 @@ export default function App() {
         </main>
         <Footer />
       </MotionConfig>
-    </LangProvider>
+    </>
   );
 }

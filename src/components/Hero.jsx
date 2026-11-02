@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import { animate, motion, useInView, useReducedMotion } from 'framer-motion';
-import { useLang } from '../lang.jsx';
 import { figures, hero } from '../content.js';
 
 const rise = {
@@ -9,23 +8,22 @@ const rise = {
 };
 
 export function Hero() {
-  const { t } = useLang();
   return (
     <div className="hero" id="top">
       <div>
         <motion.p className="label" variants={rise} initial="hidden" animate="show" custom={0}>
-          {t(hero.eyebrow)}
+          {hero.eyebrow}
         </motion.p>
         <h1>
           <motion.span variants={rise} initial="hidden" animate="show" custom={1}>Ricardo</motion.span>
           <motion.span variants={rise} initial="hidden" animate="show" custom={2}>Piedade</motion.span>
         </h1>
         <motion.p className="lede" variants={rise} initial="hidden" animate="show" custom={3}>
-          {t(hero.lede)}
+          {hero.lede}
         </motion.p>
         <motion.div className="actions" variants={rise} initial="hidden" animate="show" custom={4}>
-          <a className="btn primary" href="#contact">{t(hero.primary)}</a>
-          <a className="btn" href="#experience">{t(hero.secondary)}</a>
+          <a className="btn primary" href="#contact">{hero.primary}</a>
+          <a className="btn" href="#experience">{hero.secondary}</a>
         </motion.div>
       </div>
 
@@ -36,13 +34,13 @@ export function Hero() {
         transition={{ duration: 0.9, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="photo">
-          <img src="assets/ricardo.jpg" alt={t(hero.photoAlt)} width="848" height="848" />
+          <img src="assets/ricardo.jpg" alt={hero.photoAlt} width="848" height="848" />
         </div>
         <dl>
           {hero.facts.map((f) => (
-            <div key={f.value.en || f.value} className="tb-row">
-              <dt className="label">{t(f.label)}</dt>
-              <dd className={f.status ? 'status' : undefined}>{t(f.value)}</dd>
+            <div key={f.label} className="tb-row">
+              <dt className="label">{f.label}</dt>
+              <dd className={f.status ? 'status' : undefined}>{f.value}</dd>
             </div>
           ))}
         </dl>
@@ -80,7 +78,6 @@ function CountUp({ prefix = '', to, suffix = '' }) {
 }
 
 export function Figures() {
-  const { t } = useLang();
   return (
     <div className="figures">
       {figures.map((f, i) => (
@@ -92,7 +89,7 @@ export function Figures() {
           transition={{ duration: 0.5, delay: 0.5 + i * 0.08 }}
         >
           <CountUp prefix={f.prefix} to={f.to} suffix={f.suffix} />
-          <span>{t(f.label)}</span>
+          <span>{f.label}</span>
         </motion.div>
       ))}
     </div>

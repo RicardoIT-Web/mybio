@@ -1,17 +1,15 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useLang } from '../lang.jsx';
 import { about, contact, footer, qualifications, services, skills } from '../content.js';
 import Reveal, { SectionHead } from './Reveal.jsx';
 
 export function About() {
-  const { t } = useLang();
   return (
     <section id="about">
-      <SectionHead label={t(about.label)} title={t(about.title)} />
+      <SectionHead label={about.label} title={about.title} />
       <div className="sec-body prose">
         {about.paragraphs.map((p, i) => (
-          <Reveal as="p" key={i} delay={i * 0.08}>{t(p)}</Reveal>
+          <Reveal as="p" key={i} delay={i * 0.08}>{p}</Reveal>
         ))}
       </div>
     </section>
@@ -19,15 +17,14 @@ export function About() {
 }
 
 export function Services() {
-  const { t } = useLang();
   return (
     <section id="services">
-      <SectionHead label={t(services.label)} title={t(services.title)} />
+      <SectionHead label={services.label} title={services.title} />
       <div className="services">
         {services.items.map((s, i) => (
           <Reveal as="article" key={i} delay={(i % 3) * 0.08} whileHover={{ y: -4 }}>
-            <h3>{t(s.title)}</h3>
-            <p>{t(s.text)}</p>
+            <h3>{s.title}</h3>
+            <p>{s.text}</p>
           </Reveal>
         ))}
       </div>
@@ -36,14 +33,13 @@ export function Services() {
 }
 
 export function Skills() {
-  const { t } = useLang();
   return (
     <section id="skills">
-      <SectionHead label={t(skills.label)} title={t(skills.title)} />
+      <SectionHead label={skills.label} title={skills.title} />
       <div className="cols">
         {skills.groups.map((g, i) => (
           <Reveal key={i} delay={i * 0.08}>
-            <h3>{t(g.title)}</h3>
+            <h3>{g.title}</h3>
             <div className="chips">
               {g.items.map((item) => (
                 <motion.span key={item} whileHover={{ y: -2 }}>{item}</motion.span>
@@ -57,14 +53,13 @@ export function Skills() {
 }
 
 export function Qualifications() {
-  const { t } = useLang();
   const [filter, setFilter] = useState('all');
   const shown = qualifications.items.filter((q) => filter === 'all' || q.cat === filter);
 
   return (
     <section id="qualifications">
-      <SectionHead label={t(qualifications.label)} title={t(qualifications.title)} />
-      <Reveal className="filters" role="group" aria-label={t(qualifications.label)}>
+      <SectionHead label={qualifications.label} title={qualifications.title} />
+      <Reveal className="filters" role="group" aria-label={qualifications.label}>
         {qualifications.filters.map((f) => (
           <button
             key={f.id}
@@ -74,7 +69,7 @@ export function Qualifications() {
             onClick={() => setFilter(f.id)}
           >
             {filter === f.id && <motion.span layoutId="filter-pill" className="filter-pill" transition={{ type: 'spring', stiffness: 500, damping: 38 }} />}
-            <span>{t(f.label)}</span>
+            <span>{f.label}</span>
           </button>
         ))}
       </Reveal>
@@ -82,7 +77,7 @@ export function Qualifications() {
         <AnimatePresence initial={false}>
           {shown.map((q) => (
             <motion.li
-              key={q.year + q.by + (q.name.en || q.name)}
+              key={q.year + q.by + q.name}
               layout
               initial={{ opacity: 0, scale: 0.97 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -91,7 +86,7 @@ export function Qualifications() {
             >
               <span className="yr">{q.year}</span>
               <span>
-                {t(q.name)}
+                {q.name}
                 <small>{q.by}</small>
               </span>
             </motion.li>
@@ -101,15 +96,15 @@ export function Qualifications() {
 
       <div className="cols facts">
         <Reveal>
-          <h3>{t(qualifications.education.title)}</h3>
-          <p>{t(qualifications.education.degree)}</p>
+          <h3>{qualifications.education.title}</h3>
+          <p>{qualifications.education.degree}</p>
           <p><small>{qualifications.education.school}</small></p>
         </Reveal>
         <Reveal delay={0.08}>
-          <h3>{t(qualifications.languages.title)}</h3>
+          <h3>{qualifications.languages.title}</h3>
           {qualifications.languages.items.map((l) => (
             <p key={l.name}>
-              {l.name} <small>· {t(l.level)}</small>
+              {l.name} <small>· {l.level}</small>
             </p>
           ))}
         </Reveal>
@@ -119,7 +114,6 @@ export function Qualifications() {
 }
 
 export function Contact() {
-  const { t } = useLang();
   const [copied, setCopied] = useState(false);
 
   const selectEmail = () => {
@@ -144,9 +138,9 @@ export function Contact() {
   return (
     <section id="contact" className="contact">
       <Reveal>
-        <p className="label">{t(contact.label)}</p>
-        <h2>{t(contact.title)}</h2>
-        <p className="contact-text">{t(contact.text)}</p>
+        <p className="label">{contact.label}</p>
+        <h2>{contact.title}</h2>
+        <p className="contact-text">{contact.text}</p>
         <div className="channels">
           <span className="email">
             <a href={`mailto:${contact.email}`} id="email-text">{contact.email}</a>
@@ -159,7 +153,7 @@ export function Contact() {
                   exit={{ opacity: 0, y: -6 }}
                   transition={{ duration: 0.15 }}
                 >
-                  {copied ? t(contact.copied) : t(contact.copy)}
+                  {copied ? contact.copied : contact.copy}
                 </motion.span>
               </AnimatePresence>
             </button>
@@ -172,11 +166,10 @@ export function Contact() {
 }
 
 export function Footer() {
-  const { t } = useLang();
   return (
     <footer className="wrap">
       <span>© 2026 Ricardo Piedade</span>
-      <span>{t(footer.updated)}</span>
+      <span>{footer.updated}</span>
     </footer>
   );
 }

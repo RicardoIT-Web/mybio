@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useLang } from '../lang.jsx';
 import { career, SCHEDULE_MONTHS, SCHEDULE_START_YEAR } from '../content.js';
 import Reveal, { SectionHead } from './Reveal.jsx';
 
@@ -9,22 +8,21 @@ const axisYears = [2014, 2016, 2018, 2020, 2022, 2024, 2026];
 const latest = career.roles[career.roles.length - 1].id;
 
 function RoleDetail({ role }) {
-  const { t } = useLang();
   return (
     <div className="role">
       <div className="when">
         {role.dates}
         <br />
-        {t(role.place)}
+        {role.place}
       </div>
       <div>
         <h3>
           {role.org}
-          {role.orgNote && <small className="label"> ({t(role.orgNote)})</small>}
+          {role.orgNote && <small className="label"> ({role.orgNote})</small>}
         </h3>
-        <p className="title">{t(role.title)}</p>
+        <p className="title">{role.title}</p>
         <ul>
-          {t(role.points).map((p) => (
+          {role.points.map((p) => (
             <li key={p}>{p}</li>
           ))}
         </ul>
@@ -34,23 +32,22 @@ function RoleDetail({ role }) {
 }
 
 export default function Career() {
-  const { t } = useLang();
   const [selected, setSelected] = useState(latest);
   const [showAll, setShowAll] = useState(false);
   const selectedRole = career.roles.find((r) => r.id === selected);
 
   return (
     <section id="experience">
-      <SectionHead label={t(career.label)} title={t(career.title)} />
+      <SectionHead label={career.label} title={career.title} />
 
       <Reveal className="gantt">
         <div className="gantt-top">
           <div className="legend" aria-hidden="true">
-            <span><i className="sw" />{t(career.legend.work)}</span>
-            <span><i className="sw train" />{t(career.legend.training)}</span>
-            <span><i className="sw dia" />{t(career.legend.cert)}</span>
+            <span><i className="sw" />{career.legend.work}</span>
+            <span><i className="sw train" />{career.legend.training}</span>
+            <span><i className="sw dia" />{career.legend.cert}</span>
           </div>
-          <p className="hint">{t(career.hint)}</p>
+          <p className="hint">{career.hint}</p>
         </div>
 
         <div role="list">
@@ -70,7 +67,7 @@ export default function Career() {
                   }}
                 >
                   <span className="g-name">
-                    <b>{role.org}</b> · {t(role.short)}
+                    <b>{role.org}</b> · {role.short}
                     <small>{role.dates}</small>
                   </span>
                   <span className="track">
@@ -90,7 +87,7 @@ export default function Career() {
         </div>
 
         <div className="g-row ms-row" aria-hidden="true">
-          <span className="g-name"><b>{t(career.milestoneLane)}</b></span>
+          <span className="g-name"><b>{career.milestoneLane}</b></span>
           <span className="track">
             {career.milestones.map((m, i) => (
               <span key={m.year + i}>
@@ -103,7 +100,7 @@ export default function Career() {
                   transition={{ type: 'spring', stiffness: 400, damping: 18, delay: 1 + i * 0.12 }}
                 />
                 <em className={`${m.low ? 'low' : ''}${m.end ? ' end' : ''}`} style={{ left: pct(m.at) }}>
-                  {t(m.label)}
+                  {m.label}
                   <small>{m.year}</small>
                 </em>
               </span>
@@ -124,7 +121,7 @@ export default function Career() {
       <div className="roles" id="role-detail" aria-live="polite">
         <div className="roles-bar">
           <button type="button" id="toggle-roles" className="link-btn" onClick={() => setShowAll((s) => !s)}>
-            {showAll ? t(career.showOne) : t(career.showAll)}
+            {showAll ? career.showOne : career.showAll}
           </button>
         </div>
         <AnimatePresence mode="wait" initial={false}>

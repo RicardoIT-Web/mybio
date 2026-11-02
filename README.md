@@ -2,11 +2,11 @@
 
 Personal and professional bio page for Ricardo Piedade, Project Manager (energy, engineering and infrastructure).
 
-Built with React, Vite and Framer Motion. English and Portuguese (EN/PT switch, or add `#pt` to the link).
+Built with React, Vite and Framer Motion. One dark-blue theme, English only.
 
 ## Editing the content
 
-All text lives in `src/content.js`, with `en` and `pt` versions side by side. The headshot is `public/assets/ricardo.jpg`.
+All text lives in `src/content.js`. The headshot is `public/assets/ricardo.jpg`.
 
 ## Running locally
 
