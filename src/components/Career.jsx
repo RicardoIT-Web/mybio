@@ -6,6 +6,7 @@ import Reveal, { SectionHead } from './Reveal.jsx';
 const pct = (months) => `${(months / SCHEDULE_MONTHS) * 100}%`;
 const axisYears = [2014, 2016, 2018, 2020, 2022, 2024, 2026];
 const latest = career.roles[career.roles.length - 1].id;
+const newestFirst = [...career.roles].reverse();
 
 // Company icon on a small white tile, so logos with and without backgrounds match
 function Logo({ role }) {
@@ -63,7 +64,7 @@ export default function Career() {
         </div>
 
         <div role="list">
-          {career.roles.map((role, i) => {
+          {newestFirst.map((role, i) => {
             const isOn = !showAll && selected === role.id;
             return (
               <div role="listitem" key={role.id}>
@@ -142,7 +143,7 @@ export default function Career() {
         <AnimatePresence mode="wait" initial={false}>
           {showAll ? (
             <motion.div key="all" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-              {[...career.roles].reverse().map((role) => (
+              {newestFirst.map((role) => (
                 <RoleDetail key={role.id} role={role} />
               ))}
             </motion.div>
