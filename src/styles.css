@@ -86,9 +86,7 @@ section { scroll-margin-top: calc(var(--nav-h) + 1rem); }
 
 /* hero */
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) 20rem; gap: 3rem; align-items: end; padding-block: 3.5rem 3.5rem; }
-.hero h1 { font-size: clamp(2.5rem, 6.5vw, 4.75rem); font-weight: 800; letter-spacing: -0.01em; margin-block: 0.75rem 1.25rem; }
-.hero h1 span { display: block; }
-.lede { font-size: clamp(1.1rem, 2.2vw, 1.35rem); line-height: 1.5; max-width: 36rem; margin: 0 0 2rem; }
+.lede { font-size: clamp(1.1rem, 2.2vw, 1.35rem); line-height: 1.5; max-width: 36rem; margin: 1.25rem 0 2rem; }
 .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 .btn {
   display: inline-flex; align-items: center; gap: 0.5rem;
@@ -284,6 +282,7 @@ footer { display: grid; gap: 1rem; padding-block: 1.5rem 2.5rem; border-top: 1px
   .role { grid-template-columns: 1fr; gap: 0.5rem; }
 }
 @media (max-width: 600px) {
+  .actions { justify-content: center; }
   .services { grid-template-columns: 1fr; }
   .gantt { padding: 1rem 0.5rem 0.75rem; }
   .g-row { grid-template-columns: 1fr; gap: 0.35rem; }

@@ -14,14 +14,12 @@ export function Hero() {
         <motion.p className="label" variants={rise} initial="hidden" animate="show" custom={0}>
           {hero.eyebrow}
         </motion.p>
-        <h1>
-          <motion.span variants={rise} initial="hidden" animate="show" custom={1}>Ricardo</motion.span>
-          <motion.span variants={rise} initial="hidden" animate="show" custom={2}>Piedade</motion.span>
-        </h1>
-        <motion.p className="lede" variants={rise} initial="hidden" animate="show" custom={3}>
+        {/* name stays in the page outline for screen readers and search engines, but isn't shown */}
+        <h1 className="sr-only">Ricardo Piedade</h1>
+        <motion.p className="lede" variants={rise} initial="hidden" animate="show" custom={1}>
           {hero.lede}
         </motion.p>
-        <motion.div className="actions" variants={rise} initial="hidden" animate="show" custom={4}>
+        <motion.div className="actions" variants={rise} initial="hidden" animate="show" custom={2}>
           <a className="btn primary" href="#contact">{hero.primary}</a>
           <a className="btn" href="#experience">{hero.secondary}</a>
         </motion.div>
