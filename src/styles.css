@@ -270,7 +270,10 @@ footer { display: grid; gap: 1rem; padding-block: 1.5rem 2.5rem; border-top: 1px
 }
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; gap: 2rem; padding-block: 2rem 2.5rem; }
-  .titleblock { max-width: 22rem; order: -1; }
+  .titleblock { width: 100%; max-width: 22rem; justify-self: center; order: -1; }
+  .actions { justify-content: center; }
+  .hero > div:first-child { text-align: center; }
+  .hero .lede { margin-inline: auto; }
   .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .figures > div:nth-child(3) { padding-left: 0; border-left: 0; }
   .figures > div:nth-child(n+3) { border-top: 1px solid var(--line); }
@@ -282,7 +285,6 @@ footer { display: grid; gap: 1rem; padding-block: 1.5rem 2.5rem; border-top: 1px
   .role { grid-template-columns: 1fr; gap: 0.5rem; }
 }
 @media (max-width: 600px) {
-  .actions { justify-content: center; }
   .services { grid-template-columns: 1fr; }
   .gantt { padding: 1rem 0.5rem 0.75rem; }
   .g-row { grid-template-columns: 1fr; gap: 0.35rem; }
