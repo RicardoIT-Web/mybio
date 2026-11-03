@@ -54,12 +54,12 @@ export default function Career() {
 
       <Reveal className="gantt">
         <div className="gantt-top">
+          <p className="hint">{career.hint}</p>
           <div className="legend" aria-hidden="true">
             <span><i className="sw" />{career.legend.work}</span>
             <span><i className="sw train" />{career.legend.training}</span>
             <span><i className="sw dia" />{career.legend.cert}</span>
           </div>
-          <p className="hint">{career.hint}</p>
         </div>
 
         <div role="list">

@@ -168,6 +168,10 @@ export function Contact() {
 export function Footer() {
   return (
     <footer className="wrap">
+      <a className="to-top" href="#top">
+        <i aria-hidden="true">↑</i>
+        {footer.backToTop}
+      </a>
       <div className="footer-row">
         <span>© 2026 Ricardo Piedade</span>
         <span>{footer.updated}</span>

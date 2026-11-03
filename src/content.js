@@ -247,6 +247,7 @@ export const contact = {
 
 export const footer = {
   updated: 'Updated November 2026',
+  backToTop: 'Back to top',
   disclosureTitle: 'AI disclosure',
   disclosure:
     'In creating this Bio, I collaborated with Claude to assist with designing my CV in a digital format. I affirm that all AI-generated and co-created content underwent thorough review and evaluation. The final output accurately reflects my understanding, expertise, and intended meaning. While AI assistance was instrumental in the process, I maintain full responsibility for the content, its accuracy, and its presentation. This disclosure is made in the spirit of transparency and to acknowledge the role of AI in the creation process.',
