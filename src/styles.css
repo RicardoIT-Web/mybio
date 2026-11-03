@@ -102,11 +102,11 @@ section { scroll-margin-top: calc(var(--nav-h) + 1rem); }
 .btn:not(.primary):hover { background: var(--fg); color: var(--bg); }
 @media (prefers-reduced-motion: reduce) { .btn:hover { transform: none; } }
 
-.titleblock { margin: 0; border: 1px solid var(--fg); background: var(--surface); }
-.photo { overflow: hidden; border-bottom: 1px solid var(--fg); }
+.titleblock { margin: 0; display: grid; gap: 1.5rem; }
+.photo { justify-self: center; width: min(100%, 15rem); overflow: hidden; border-radius: 50%; border: 2px solid var(--fg); box-shadow: 0 0 0 6px var(--bg), 0 0 0 7px var(--line); }
 .photo img { display: block; width: 100%; height: auto; max-width: 100%; aspect-ratio: 1; object-fit: cover; transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
 .titleblock:hover .photo img { transform: scale(1.04); }
-.titleblock dl { margin: 0; }
+.titleblock dl { margin: 0; border: 1px solid var(--fg); background: var(--surface); }
 .tb-row { display: grid; grid-template-columns: 7.5rem 1fr; border-bottom: 1px solid var(--line); }
 .tb-row:last-child { border-bottom: 0; }
 .tb-row dt, .tb-row dd { margin: 0; padding: 0.55rem 0.75rem; font-size: 0.875rem; }
