@@ -168,8 +168,13 @@ export function Contact() {
 export function Footer() {
   return (
     <footer className="wrap">
-      <span>© 2026 Ricardo Piedade</span>
-      <span>{footer.updated}</span>
+      <div className="footer-row">
+        <span>© 2026 Ricardo Piedade</span>
+        <span>{footer.updated}</span>
+      </div>
+      <p className="disclosure">
+        <b>{footer.disclosureTitle}.</b> {footer.disclosure}
+      </p>
     </footer>
   );
 }
