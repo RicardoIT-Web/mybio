@@ -101,7 +101,7 @@ section { scroll-margin-top: calc(var(--nav-h) + 1rem); }
 @media (prefers-reduced-motion: reduce) { .btn:hover { transform: none; } }
 
 .titleblock { margin: 0; display: grid; gap: 1.5rem; }
-.photo { justify-self: center; width: min(100%, 15rem); overflow: hidden; border-radius: 50%; border: 2px solid var(--fg); box-shadow: 0 0 0 6px var(--bg), 0 0 0 7px var(--line); }
+.photo { justify-self: center; width: min(100%, 11rem); overflow: hidden; border-radius: 50%; border: 2px solid var(--fg); box-shadow: 0 0 0 6px var(--bg), 0 0 0 7px var(--line); }
 .photo img { display: block; width: 100%; height: auto; max-width: 100%; aspect-ratio: 1; object-fit: cover; transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
 .titleblock:hover .photo img { transform: scale(1.04); }
 .titleblock dl { margin: 0; border: 1px solid var(--fg); background: var(--surface); }
@@ -270,7 +270,7 @@ footer { display: grid; gap: 1rem; padding-block: 1.5rem 2.5rem; border-top: 1px
 }
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; gap: 2rem; padding-block: 2rem 2.5rem; }
-  .titleblock { max-width: 22rem; }
+  .titleblock { max-width: 22rem; order: -1; }
   .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .figures > div:nth-child(3) { padding-left: 0; border-left: 0; }
   .figures > div:nth-child(n+3) { border-top: 1px solid var(--line); }
