@@ -219,6 +219,12 @@ button.g-row.on .bar.train { background: repeating-linear-gradient(135deg, var(-
 .role ul { margin: 0; padding-left: 1.1rem; max-width: 44rem; }
 .role li { margin-bottom: 0.35rem; }
 .role li::marker { color: var(--accent); }
+.projects { margin-top: 1rem; }
+.projects .label { margin: 0 0 0.5rem; }
+.role .projects ul { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; list-style: none; }
+.role .projects li { margin: 0; }
+.projects a { display: inline-block; padding: 0.35rem 0.8rem; border: 1px solid var(--line); border-radius: 999px; font-size: 0.85rem; color: var(--fg); text-decoration: none; transition: border-color 0.2s; }
+.projects a:hover { border-color: var(--bar); }
 
 /* skills */
 .cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }

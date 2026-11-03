@@ -82,6 +82,7 @@ export const career = {
   milestoneLane: 'Certifications',
   showAll: 'Show all roles',
   showOne: 'Show one role at a time',
+  projectsLabel: 'Example projects',
   roles: [
     {
       id: 'ge',
@@ -159,6 +160,11 @@ export const career = {
       start: 98,
       length: 18,
       points: ['Built web projects in HTML, CSS, JavaScript and Python, managing the work with Agile Kanban.'],
+      projects: [
+        { name: 'Motorbike Buddy', url: 'https://ricardoit-web.github.io/motorbikebuddy.com/' },
+        { name: 'Rock, Scissors, Paper', url: 'https://ricardoit-web.github.io/rock-scissors-paper/' },
+        { name: 'Love Running members log', url: 'https://love-running-members-log.onrender.com/' },
+      ],
     },
     {
       id: 'bh2',

@@ -39,6 +39,18 @@ function RoleDetail({ role }) {
             <li key={p}>{p}</li>
           ))}
         </ul>
+        {role.projects && (
+          <div className="projects">
+            <p className="label">{career.projectsLabel}</p>
+            <ul>
+              {role.projects.map((p) => (
+                <li key={p.url}>
+                  <a href={p.url} target="_blank" rel="noopener noreferrer">{p.name} ↗</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
