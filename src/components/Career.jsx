@@ -45,7 +45,7 @@ function RoleDetail({ role }) {
 
 export default function Career() {
   const [selected, setSelected] = useState(latest);
-  const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(true);
   const selectedRole = career.roles.find((r) => r.id === selected);
 
   return (
