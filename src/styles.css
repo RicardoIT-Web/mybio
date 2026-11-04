@@ -217,7 +217,7 @@ button.g-row.on .bar.train { background: repeating-linear-gradient(135deg, var(-
 .role h3 small { font-family: var(--mono); font-stretch: 100%; }
 .role .title { margin: 0.25rem 0 0.75rem; font-weight: 500; }
 .role ul { margin: 0; padding-left: 1.1rem; max-width: 44rem; }
-.role li { margin-bottom: 0.35rem; }
+.role li { margin-bottom: 0.35rem; text-align: justify; hyphens: auto; }
 .role li::marker { color: var(--accent); }
 .projects { margin-top: 1rem; }
 .projects .label { margin: 0 0 0.5rem; }
