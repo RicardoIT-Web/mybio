@@ -37,8 +37,8 @@ export function Hero() {
         <dl>
           {hero.facts.map((f) => (
             <div key={f.label} className="tb-row">
-              <dt className="label">{f.label}</dt>
-              <dd className={f.status ? 'status' : undefined}>{f.value}</dd>
+              <dt className={f.status ? 'label status' : 'label'}>{f.label}</dt>
+              <dd>{f.value}</dd>
             </div>
           ))}
         </dl>
