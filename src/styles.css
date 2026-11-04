@@ -86,7 +86,7 @@ section { scroll-margin-top: calc(var(--nav-h) + 1rem); }
 
 /* hero */
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) 20rem; gap: 3rem; align-items: end; padding-block: 3.5rem 3.5rem; }
-.lede { font-size: clamp(1.1rem, 2.2vw, 1.35rem); line-height: 1.5; max-width: 36rem; margin: 1.25rem 0 2rem; }
+.lede { font-size: clamp(1.1rem, 2.2vw, 1.35rem); line-height: 1.5; max-width: 36rem; margin: 1.25rem 0 2rem; text-align: justify; hyphens: auto; }
 .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 .btn {
   display: inline-flex; align-items: center; gap: 0.5rem;
