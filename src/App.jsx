@@ -9,6 +9,7 @@ export default function App() {
     <>
       {/* "user" turns animations off for people who ask their device for reduced motion */}
       <MotionConfig reducedMotion="user">
+        <div className="backdrop" aria-hidden="true" />
         <Nav />
         <main className="wrap">
           <Hero />

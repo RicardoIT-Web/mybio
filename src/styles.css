@@ -32,6 +32,22 @@ body {
 body::before {
   content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg);
 }
+/* Faint colour glows behind everything, fixed so they stay put while the page scrolls */
+.backdrop {
+  position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(60rem 40rem at 88% -5%, rgba(94, 162, 214, 0.13), transparent 70%),
+    radial-gradient(50rem 36rem at -10% 75%, rgba(72, 196, 214, 0.07), transparent 70%);
+}
+/* Very faint line drawings (schedule, critical path, gears) sitting behind a few sections */
+.hero, #services, #qualifications { position: relative; }
+.hero::before, #services::before, #qualifications::before {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  background: no-repeat center / contain; opacity: 0.07;
+}
+.hero::before { background-image: url('./assets/bg-gantt.svg'); width: min(38rem, 90%); aspect-ratio: 600 / 360; top: 0.5rem; right: 8rem; }
+#services::before { background-image: url('./assets/bg-network.svg'); width: min(24rem, 70%); aspect-ratio: 520 / 300; top: 0; right: 1rem; }
+#qualifications::before { background-image: url('./assets/bg-gear.svg'); width: min(18rem, 55%); aspect-ratio: 1; top: 3rem; right: 2rem; }
 .wrap {
   max-width: 72rem;
   margin: 0 auto;
@@ -283,6 +299,7 @@ footer { display: grid; gap: 1rem; padding-block: 1.5rem 2.5rem; border-top: 1px
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; gap: 2rem; padding-block: 2rem 2.5rem; }
   .titleblock { width: 100%; max-width: 22rem; justify-self: center; order: -1; }
+  .hero::before { right: 0; left: 0; margin-inline: auto; top: 1rem; }
   .actions { justify-content: center; }
   .hero > div:first-child { text-align: center; }
   .hero .lede { margin-inline: auto; }
