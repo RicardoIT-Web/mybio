@@ -76,7 +76,8 @@ h1, h2, h3 { font-family: var(--display); font-stretch: 75%; line-height: 1.05; 
 .burger i { display: block; width: 16px; height: 1.5px; background: var(--fg); transition: transform 0.25s; }
 .burger.open i:first-child { transform: translateY(3.25px) rotate(45deg); }
 .burger.open i:last-child { transform: translateY(-3.25px) rotate(-45deg); }
-.mobile-menu { overflow: hidden; border-top: 1px solid var(--line); }
+/* opens over the page so the content below does not shift when a link closes it */
+.mobile-menu { position: absolute; top: 100%; left: 0; right: 0; overflow: hidden; background: var(--bg); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35); }
 .mobile-menu .wrap { display: grid; padding-block: 0.5rem 1rem; }
 .mobile-menu a { padding: 0.75rem 0; font-size: 1.05rem; color: var(--fg); border-bottom: 1px solid var(--line); }
 .mobile-menu .nav-underline { display: none; }
