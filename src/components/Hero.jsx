@@ -32,7 +32,7 @@ export function Hero() {
         transition={{ duration: 0.9, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="photo">
-          <img src="assets/ricardo.jpg" alt={hero.photoAlt} width="848" height="848" />
+          <img src="assets/ricardo.jpg" alt={hero.photoAlt} width="424" height="424" />
         </div>
         <dl>
           {hero.facts.map((f) => (
