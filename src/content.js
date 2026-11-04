@@ -22,7 +22,7 @@ export const hero = {
 };
 
 export const figures = [
-  { to: 8, suffix: '+', label: 'years in project delivery' },
+  { to: 15, suffix: '+', label: 'years in project delivery' },
   { prefix: '£', to: 5, suffix: 'm', label: 'largest budget managed' },
   { prefix: '$', to: 1, suffix: 'bn', label: 'project delivery supported' },
   { prefix: '£', to: 500, suffix: 'm', label: 'of equipment tracked globally' },
