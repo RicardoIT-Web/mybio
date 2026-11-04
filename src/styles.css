@@ -40,14 +40,17 @@ body::before {
     radial-gradient(50rem 36rem at -10% 75%, rgba(72, 196, 214, 0.07), transparent 70%);
 }
 /* Very faint line drawings (schedule, critical path, gears) sitting behind a few sections */
-.hero, #services, #qualifications { position: relative; }
-.hero::before, #services::before, #qualifications::before {
+.hero, #about, #services, #skills, #qualifications, #contact { position: relative; }
+.hero::before, #about::before, #services::before, #skills::before, #qualifications::before, #contact::before {
   content: ""; position: absolute; z-index: -1; pointer-events: none;
   background: no-repeat center / contain; opacity: 0.07;
 }
 .hero::before { background-image: url('./assets/bg-gantt.svg'); width: min(38rem, 90%); aspect-ratio: 600 / 360; top: 0.5rem; right: 8rem; }
 #services::before { background-image: url('./assets/bg-network.svg'); width: min(24rem, 70%); aspect-ratio: 520 / 300; top: 0; right: 1rem; }
 #qualifications::before { background-image: url('./assets/bg-gear.svg'); width: min(18rem, 55%); aspect-ratio: 1; top: 3rem; right: 2rem; }
+#about::before { background-image: url('./assets/bg-hardhat.svg'); width: min(16rem, 50%); aspect-ratio: 260 / 170; top: 3.5rem; right: 0; }
+#skills::before { background-image: url('./assets/bg-kanban.svg'); width: min(20rem, 60%); aspect-ratio: 420 / 260; top: 0.5rem; right: 1rem; }
+#contact::before { background-image: url('./assets/bg-chart.svg'); width: min(20rem, 55%); aspect-ratio: 360 / 260; top: 4rem; right: 1rem; }
 .wrap {
   max-width: 72rem;
   margin: 0 auto;
