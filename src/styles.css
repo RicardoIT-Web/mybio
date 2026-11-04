@@ -39,15 +39,16 @@ body::before {
     radial-gradient(60rem 40rem at 88% -5%, rgba(94, 162, 214, 0.13), transparent 70%),
     radial-gradient(50rem 36rem at -10% 75%, rgba(72, 196, 214, 0.07), transparent 70%);
 }
-/* Very faint line drawings (schedule, critical path, gears) sitting behind a few sections */
-.hero, #about, #services, #skills, #qualifications, #contact { position: relative; }
-.hero::before, #about::before, #services::before, #skills::before, #qualifications::before, #contact::before {
+/* Very faint line drawings (schedule, charts, gears, graduation cap) sitting behind a few sections */
+.hero, #about, #services, .roles, #skills, .facts, #contact { position: relative; }
+.hero::before, #about::before, #services::before, .roles::before, #skills::before, .facts::before, #contact::before {
   content: ""; position: absolute; z-index: -1; pointer-events: none;
   background: no-repeat center / contain; opacity: 0.07;
 }
 .hero::before { background-image: url('./assets/bg-gantt.svg'); width: min(38rem, 90%); aspect-ratio: 600 / 360; top: 0.5rem; right: 8rem; }
 #services::before { background-image: url('./assets/bg-network.svg'); width: min(24rem, 70%); aspect-ratio: 520 / 300; top: 0; right: 1rem; }
-#qualifications::before { background-image: url('./assets/bg-gear.svg'); width: min(18rem, 55%); aspect-ratio: 1; top: 3rem; right: 2rem; }
+.roles::before { background-image: url('./assets/bg-gear.svg'); width: min(18rem, 55%); aspect-ratio: 1; top: 3rem; right: 1rem; }
+.facts::before { background-image: url('./assets/bg-gradcap.svg'); width: min(16rem, 50%); aspect-ratio: 280 / 200; top: -5rem; right: 1rem; }
 #about::before { background-image: url('./assets/bg-pie.svg'); width: min(13rem, 42%); aspect-ratio: 1; top: 3rem; right: 1rem; }
 #skills::before { background-image: url('./assets/bg-kanban.svg'); width: min(20rem, 60%); aspect-ratio: 420 / 260; top: 0.5rem; right: 1rem; }
 #contact::before { background-image: url('./assets/bg-chart.svg'); width: min(20rem, 55%); aspect-ratio: 360 / 260; top: 4rem; right: 1rem; }
