@@ -32,9 +32,8 @@ export const about = {
   label: 'About',
   title: 'Safety first, then clear communication',
   paragraphs: [
-    "I'm a project manager with more than eight years' experience delivering engineering, energy and infrastructure projects across oil and gas, nuclear new build and major highways schemes, in the UK and around the world.",
-    'Health, safety and the environment always come first. After that, my focus is clear communication: regular, honest updates that keep clients, suppliers and teams aligned from kick-off to handover.',
-    "I combine formal project management training (APM, PRINCE2, Agile) with hands-on digital skills in software development and AI tools. After more than a decade working in the UK, I'm now based in Portugal and work in both English and Portuguese.",
+    'Safety is never up for negotiation: health, safety and the environment come first on every project I run. Close behind is communication. I give clients, suppliers and teams regular, honest updates, so issues surface early and everyone moves forward together.',
+    "I pair formal project management training (APM, PRINCE2 and Agile) with hands-on digital skills in software development and AI tools, and I'm always looking for smarter ways to plan, track and report. After more than a decade in the UK, I'm now based in Portugal and work confidently in both English and Portuguese.",
   ],
 };
 

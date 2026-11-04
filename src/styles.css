@@ -132,7 +132,7 @@ section { padding-block: 5rem 0; }
 .sec-head { display: grid; grid-template-columns: 12rem minmax(0, 1fr); gap: 2rem; margin-bottom: 2rem; align-items: baseline; }
 .sec-head h2 { font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; }
 .sec-body { margin-left: 14rem; }
-.prose p { max-width: 40rem; margin: 0 0 1rem; font-size: 1.075rem; }
+.prose p { max-width: 40rem; margin: 0 0 1rem; font-size: 1.075rem; text-align: justify; hyphens: auto; }
 
 .services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 .services article {
