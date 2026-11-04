@@ -10,7 +10,7 @@ export const nav = [
 
 export const hero = {
   eyebrow: 'Project Manager · Energy, Engineering & Infrastructure',
-  lede: 'I deliver complex engineering, energy and infrastructure projects safely, on budget and with every stakeholder kept informed.',
+  lede: "I'm a Project Manager with 8+ years of delivering complex engineering, energy and infrastructure projects, from oil & gas and nuclear to construction and major highways schemes, across the UK and around the world. Safety comes first on every job, and I keep every stakeholder engaged and on board from kick-off to handover.",
   primary: 'Get in touch',
   secondary: 'View experience',
   photoAlt: 'Portrait of Ricardo Piedade',
