@@ -170,7 +170,7 @@ section { padding-block: 5rem 0; }
 .legend span { display: inline-flex; align-items: center; gap: 0.5rem; }
 .hint { margin: 0; font-size: 0.85rem; color: var(--muted); font-style: italic; }
 .sw { width: 1.5rem; height: 0.6rem; background: var(--bar); display: inline-block; border-radius: 2px; }
-.sw.train { background: repeating-linear-gradient(135deg, var(--bar) 0 3px, var(--bar-soft) 3px 6px); }
+.sw.train { background: repeating-linear-gradient(135deg, var(--accent) 0 3px, var(--bar-soft) 3px 6px); }
 .sw.dia { width: 0.7rem; height: 0.7rem; background: var(--accent); transform: rotate(45deg); border-radius: 0; }
 .g-row {
   display: grid; grid-template-columns: 17rem minmax(0, 1fr); gap: 1rem; align-items: center;
@@ -205,7 +205,7 @@ button.g-row.on .bar.train { background: repeating-linear-gradient(135deg, var(-
   background: var(--bar); border-radius: 2px; transform-origin: left center;
   transition: background-color 0.25s;
 }
-.bar.train { background: repeating-linear-gradient(135deg, var(--bar) 0 3px, var(--bar-soft) 3px 6px); }
+.bar.train { background: repeating-linear-gradient(135deg, var(--accent) 0 3px, var(--bar-soft) 3px 6px); }
 .ms-row .track { height: 4.6rem; }
 .ms {
   position: absolute; top: 0.75rem;
