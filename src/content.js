@@ -37,6 +37,10 @@ export const about = {
     "I pair formal project management training (APM, PRINCE2 and Agile) with hands-on software development skills, and I'm always looking for smarter ways to plan, track and report. After more than a decade in the UK, I'm now based in Portugal and work confidently in both English and Portuguese.",
     "AI has become one of my favourite tools, and I'm growing my skills with it every week. I now help companies put it to work through workflow automation, cutting out repetitive admin so teams can focus on the work that matters. I also design and build websites and mobile apps, taking ideas from first sketch all the way to launch.",
   ],
+  closing: {
+    text: 'Looking for a Project Manager to deliver a specific project, or think I could help you and your team with AI-related tasks?',
+    link: "Let's chat.",
+  },
 };
 
 export const services = {

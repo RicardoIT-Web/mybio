@@ -11,6 +11,9 @@ export function About() {
         {about.paragraphs.map((p, i) => (
           <Reveal as="p" key={i} delay={i * 0.08}>{p}</Reveal>
         ))}
+        <Reveal as="p" delay={about.paragraphs.length * 0.08}>
+          {about.closing.text} <a className="text-link" href="#contact">{about.closing.link}</a>
+        </Reveal>
       </div>
     </section>
   );
