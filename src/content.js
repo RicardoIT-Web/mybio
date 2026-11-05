@@ -59,8 +59,8 @@ export const services = {
       text: 'Weekly client and regional updates, clear reporting, and early handling of risks and issues.',
     },
     {
-      title: 'Digital tools and processes',
-      text: 'New tracking applications, PLM rollouts and user training, plus web development and AI-assisted workflows.',
+      title: 'AI, automation and digital',
+      text: "Workflow automation that takes repetitive admin off your team's plate, plus websites and mobile apps designed and built from first sketch to launch. Backed by hands-on experience rolling out tracking applications and delivering user training.",
     },
     {
       title: 'Safety and quality',
