@@ -39,7 +39,7 @@ export const about = {
   ],
   closing: {
     text: 'Looking for a Project Manager to deliver a specific project, or think I could help you and your team with AI-related tasks?',
-    link: "Let's chat.",
+    link: "Let's talk.",
   },
 };
 

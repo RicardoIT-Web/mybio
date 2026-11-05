@@ -154,7 +154,7 @@ section { padding-block: 5rem 0; }
 .sec-head h2 { font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; }
 .sec-body { margin-left: 14rem; }
 .prose p { max-width: 40rem; margin: 0 0 1rem; font-size: 1.075rem; text-align: justify; hyphens: auto; }
-.text-link { color: var(--accent); font-weight: 600; white-space: nowrap; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.text-link { color: var(--bar); font-weight: 600; white-space: nowrap; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 .text-link:hover { text-decoration-thickness: 2px; }
 
 .services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
