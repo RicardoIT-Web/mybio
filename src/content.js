@@ -69,7 +69,7 @@ export const services = {
     },
     {
       title: 'Safety and quality',
-      text: 'An HSE-first approach backed by CDM 2015, ISO 9001:2015 and Lean Six Sigma training.',
+      text: 'An HSE-first approach backed by CDM, ISO 9001 and Lean Six Sigma training.',
     },
   ],
 };
