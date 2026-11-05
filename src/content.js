@@ -33,6 +33,7 @@ export const about = {
   title: 'Safety first, then clear communication',
   paragraphs: [
     'Safety is never up for negotiation: health, safety and the environment come first on every project I run. Close behind is communication. I give clients, suppliers and teams regular, honest updates, so issues surface early and everyone moves forward together.',
+    'My path into project delivery began in the energy sector around 15 years ago, managing project documentation, where I learned the value of well-run transmittals and full traceability. A secondment to the purchasing team followed, supporting a busy workload and giving me a solid grounding in procurement. Those foundations still shape how I run projects today.',
     "I pair formal project management training (APM, PRINCE2 and Agile) with hands-on software development skills, and I'm always looking for smarter ways to plan, track and report. After more than a decade in the UK, I'm now based in Portugal and work confidently in both English and Portuguese.",
     "AI has become one of my favourite tools, and I'm growing my skills with it every week. I now help companies put it to work through workflow automation, cutting out repetitive admin so teams can focus on the work that matters. I also design and build websites and mobile apps, taking ideas from first sketch all the way to launch.",
   ],
