@@ -60,7 +60,7 @@ export const services = {
     },
     {
       title: 'AI, automation and digital',
-      text: "Workflow automation that takes repetitive admin off your team's plate, plus websites and mobile apps designed and built from first sketch to launch. Backed by hands-on experience rolling out tracking applications and delivering user training.",
+      text: "Workflow automation that takes repetitive admin off your team, allowing them to focus on other tasks. Websites and mobile apps designed and built from first sketch to launch. Backed by hands-on experience rolling out tracking applications and delivering user training.",
     },
     {
       title: 'Safety and quality',
