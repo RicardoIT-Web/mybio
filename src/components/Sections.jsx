@@ -76,8 +76,8 @@ export function Qualifications() {
           </button>
         ))}
       </Reveal>
-      <motion.ul className="quals" layout>
-        <AnimatePresence initial={false}>
+      <motion.ul className="quals" layout style={{ '--rows': Math.ceil(shown.length / 2) }}>
+        <AnimatePresence initial={false} mode="popLayout">
           {shown.map((q) => (
             <motion.li
               key={q.year + q.by + q.name}
