@@ -30,6 +30,7 @@ function RoleDetail({ role }) {
           <Logo role={role} />
           <span>
             {role.org}
+            {role.division && <>{' –'} <span className="role-div">{role.division}</span></>}
             {role.orgNote && <small className="label"> ({role.orgNote})</small>}
           </span>
         </h3>
